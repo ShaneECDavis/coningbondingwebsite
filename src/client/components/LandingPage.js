@@ -15,6 +15,8 @@ import {
   Visibility
 } from 'semantic-ui-react'
 
+
+
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
@@ -54,6 +56,8 @@ const HomepageHeading = ({ mobile }) => (
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
+
+ // segment change color play with
 class DesktopContainer extends Component {
   state = {}
 
@@ -74,7 +78,7 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ minHeight: 700, width: '100%',overflow:'hidden',backgroundPosition:'center', padding: '1em 0em', backgroundImage: `url(MilwaukeeCountyCourthouse.jpg)` ,backgroundSize: 'cover',backgroundRepeat: 'no-repeat', backgroundPosition: 'center', margin: '0 auto'}}
             vertical
           >
             <Menu
@@ -117,7 +121,7 @@ class DesktopContainer extends Component {
 }
 
 
-
+// segment change play with 
 class MobileContainer extends Component {
   state = {}
 
