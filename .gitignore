@@ -6,3 +6,8 @@ node_modules/
 
 #Project
 dist/
+
+secrets.js
+
+#API
+.env

@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
+import LandingPage from './components/LandingPage'
 
 export default class App extends Component {
   render() {
-    return <div>Welcome to PudgyTech React Boilerplate App</div>
+    return (
+      <div>
+        <LandingPage />
+      </div>
+    )
   }
 }
