@@ -15,8 +15,6 @@ import {
   Visibility
 } from 'semantic-ui-react'
 
-
-
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
@@ -25,9 +23,11 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as="h1"
-      content="Imagine-a-Company"
+      content="Coning Bonding & Insurance Services"
       inverted
       style={{
+        color: 'white',
+        textShadow: '2px 2px #525256',
         fontSize: mobile ? '2em' : '4em',
         fontWeight: 'normal',
         marginBottom: 0,
@@ -36,7 +36,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as="h2"
-      content="Do whatever you want when you want to."
+      content="For All Your Insurance Needs"
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -51,13 +51,12 @@ const HomepageHeading = ({ mobile }) => (
   </Container>
 )
 
-
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
 
- // segment change color play with
+// segment change color play with
 class DesktopContainer extends Component {
   state = {}
 
@@ -78,7 +77,19 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, width: '100%',overflow:'hidden',backgroundPosition:'center', padding: '1em 0em', backgroundImage: `url(MilwaukeeCountyCourthouse.jpg)` ,backgroundSize: 'cover',backgroundRepeat: 'no-repeat', backgroundPosition: 'center', margin: '0 auto'}}
+            style={{
+              minHeight: 700,
+              width: '100%',
+              overflow: 'hidden',
+              backgroundPosition: 'center',
+              padding: '1em 0em',
+              backgroundImage: `url(MilwaukeeCountyCourthouse.jpg)`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              margin: '0 auto',
+              opacity: 0.8
+            }}
             vertical
           >
             <Menu
@@ -120,8 +131,7 @@ class DesktopContainer extends Component {
   }
 }
 
-
-// segment change play with 
+// segment change play with
 class MobileContainer extends Component {
   state = {}
 
@@ -195,16 +205,12 @@ class MobileContainer extends Component {
   }
 }
 
-
-
 const ResponsiveContainer = ({ children }) => (
   <div>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
   </div>
 )
-
-
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
@@ -229,12 +235,12 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
           <Grid.Column floated="right" width={6}>
-            <Image
+            {/* <Image
               bordered
               rounded
               size="large"
               src="/images/wireframe/white-image.png"
-            />
+            /> */}
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -260,7 +266,7 @@ const HomepageLayout = () => (
               "I shouldn't have gone with their competitor."
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src="/images/avatar/large/nan.jpg" />
+              {/* <Image avatar src="/images/avatar/large/nan.jpg" /> */}
               <b>Nan</b> Chief Fun Officer Acme Toys
             </p>
           </Grid.Column>
