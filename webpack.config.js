@@ -34,7 +34,7 @@ const client = {
 const server = {
   mode: isDev ? 'development' : 'production',
   entry: {
-    server: './src/server/index.js'
+    server: './src/server/server.js'
   },
   target: 'node',
   output: {
