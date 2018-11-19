@@ -11,7 +11,7 @@
     "build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
-    "start": "node ./dist/server.js",
+    "start": "node server.js",
     "clean": "rimraf dist node_modules",
     "test": "jest ./src",
     "heroku-postbuild": "webpack -p"
